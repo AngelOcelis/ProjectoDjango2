@@ -18,5 +18,7 @@ from django.urls import path, include
 from todo import views
 
 urlpatterns = [
-    path('', include("todo.urls")),  
+    path('', include("todo.urls")),
+    path("eliminar/<int:tarea_id>/",views.eliminar,name="eliminar"),
+    path("editar/<int:tarea_id>/",views.editar,name="editar"),
 ]
